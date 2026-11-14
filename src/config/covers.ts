@@ -1,6 +1,3 @@
-import coverBonus1 from '@/src/assets/images/cover_bonus_1_1794659350956.jpg';
-import coverBonus2 from '@/src/assets/images/cover_bonus_2_1794659352564.jpg';
-import coverBonus3 from '@/src/assets/images/cover_bonus_3_1794659353207.jpg';
 import { CoverKey, CoverOverrideSettings } from '../types/course';
 
 /**
@@ -16,9 +13,9 @@ export const DEFAULT_COVER_IMAGES: Record<CoverKey, string> = {
   'module-5': '/assets/aistudio/file_0000000029c88210bd7ad2f702ae255e_08853af5.png',
   'module-6': '/assets/aistudio/file_000000001a7481f4ae702770dd5fd90d_749e64d3.png',
   'bonus-main': '/assets/aistudio/file_00000000576881f49124086ca1282bbe_4cad6d26.png',
-  'bonus-1': coverBonus1,
-  'bonus-2': coverBonus2,
-  'bonus-3': coverBonus3,
+  'bonus-1': '/assets/aistudio/file_00000000cc0c81f4b2d2abd99c80f2d9_5941dd11.png',
+  'bonus-2': '/assets/aistudio/file_00000000b79881f4a1f95e347cefcb58_799dcf59.png',
+  'bonus-3': '/assets/aistudio/file_00000000548881f483e806a782cf69c1_3e6c3632.png',
 };
 
 /**
@@ -33,6 +30,9 @@ export const COVERS_WITH_EMBEDDED_ARTWORK: Partial<Record<CoverKey, boolean>> = 
   'module-5': true,
   'module-6': true,
   'bonus-main': true,
+  'bonus-1': true,
+  'bonus-2': true,
+  'bonus-3': true,
 };
 
 export const COVER_SLOT_LABELS: { key: CoverKey; label: string }[] = [

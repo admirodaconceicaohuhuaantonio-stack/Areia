@@ -216,76 +216,40 @@ export function HomeTab({
         </div>
       </section>
 
-      {/* Secção Especial BÓNUS EXCLUSIVOS (Capa única com os 3 bónus no interior) */}
+      {/* Secção Especial BÓNUS EXCLUSIVOS — Mesmo formato limpo dos outros módulos */}
       <section aria-labelledby="heading-bonus" className="space-y-4 pt-2">
         <div className="flex items-baseline justify-between gap-4">
-          <div>
-            <h2
-              id="heading-bonus"
-              className="font-display text-xl sm:text-2xl font-bold text-white"
-            >
-              BÓNUS EXCLUSIVOS
-            </h2>
-            <p className="text-xs sm:text-sm text-neutral-400 mt-0.5">
-              Clica na capa do módulo bónus para aceder aos 3 conteúdos de importação.
-            </p>
-          </div>
+          <h2
+            id="heading-bonus"
+            className="font-display text-xl sm:text-2xl font-bold text-white"
+          >
+            BÓNUS EXCLUSIVOS
+          </h2>
           <span className="text-xs font-mono text-neutral-400 tabular-nums whitespace-nowrap">
-            {BONUS_CONTENTS.length} conteúdos internos
+            {BONUS_CONTENTS.length} conteúdos
           </span>
         </div>
 
-        <div className="bg-[#1F1F23] rounded-3xl border border-white/10 p-5 sm:p-6 shadow-[0_14px_34px_rgba(0,0,0,0.45)]">
-          <div className="grid grid-cols-1 sm:grid-cols-[190px_minmax(0,1fr)] lg:grid-cols-[210px_minmax(0,1fr)] gap-6 items-center">
-            <div className="w-44 sm:w-full mx-auto">
-              <CoverFrame
-                imageUrl={getCoverImageUrl('bonus-main', coverSettings)}
-                title="Importação & Fornecedores"
-                kicker="Módulo Bónus"
-                subtitle="3 conteúdos exclusivos"
-                showTextOverlay={
-                  coverSettings.showCoverTextOverlay &&
-                  (Boolean(coverSettings.customCovers['bonus-main']) ||
-                    !COVERS_WITH_EMBEDDED_ARTWORK['bonus-main'])
-                }
-                onClick={onOpenBonusModule}
-              />
-            </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5">
+          <div className="flex flex-col gap-2">
+            <CoverFrame
+              imageUrl={getCoverImageUrl('bonus-main', coverSettings)}
+              title="Bónus Exclusivos"
+              kicker="Módulo 7"
+              subtitle={`${BONUS_CONTENTS.length} conteúdos`}
+              showTextOverlay={
+                coverSettings.showCoverTextOverlay &&
+                (Boolean(coverSettings.customCovers['bonus-main']) ||
+                  !COVERS_WITH_EMBEDDED_ARTWORK['bonus-main'])
+              }
+              onClick={onOpenBonusModule}
+            />
 
-            <div className="space-y-4">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-[#E50914]">
-                  Especial Importação
-                </p>
-                <h3 className="font-display text-xl sm:text-2xl font-bold text-white mt-1 text-balance">
-                  Bónus Exclusivos de Importação
-                </h3>
-                <p className="text-sm text-neutral-300 mt-2 leading-relaxed max-w-xl">
-                  Abre este módulo para aceder aos 3 conteúdos especiais: importação direta das fábricas, plataformas internacionais (Alibaba, AliExpress e eBay) e lista de fornecedores.
-                </p>
-              </div>
-
-              <div className="space-y-1.5 text-xs sm:text-sm text-neutral-200">
-                {BONUS_CONTENTS.map((bonus) => (
-                  <p key={bonus.id} className="flex items-center gap-2">
-                    <span className="font-mono text-xs text-[#E50914] font-semibold">
-                      0{bonus.number}.
-                    </span>
-                    <span>{bonus.shortTitle}</span>
-                  </p>
-                ))}
-              </div>
-
-              <div className="pt-1">
-                <button
-                  type="button"
-                  onClick={onOpenBonusModule}
-                  className="min-h-[44px] px-5 py-2.5 rounded-xl bg-[#E50914] hover:bg-[#F6121D] active:scale-[0.98] text-white text-sm font-semibold inline-flex items-center gap-2 shadow-[0_8px_20px_rgba(229,9,20,0.32)] transition-all duration-150 cursor-pointer"
-                >
-                  <span>Abrir Módulo Bónus</span>
-                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                </button>
-              </div>
+            <div className="px-1 flex items-center justify-between text-xs text-neutral-400">
+              <span className="truncate">Importação</span>
+              <span className="font-mono font-semibold text-white tabular-nums ml-2">
+                {BONUS_CONTENTS.length} bónus
+              </span>
             </div>
           </div>
         </div>

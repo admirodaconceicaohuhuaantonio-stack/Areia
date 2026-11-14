@@ -33,26 +33,25 @@ export function LoginView({ onLoginSuccess }: LoginViewProps) {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[#141414] text-white flex flex-col justify-center items-center px-4 py-10 relative overflow-hidden">
+    <div className="min-h-screen w-full bg-[#141414] text-white flex flex-col justify-center items-center px-4 py-6 sm:py-8 relative overflow-hidden">
       {/* Iluminação ambiente sutil estilo cinema */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[540px] h-[540px] rounded-full bg-[#E50914]/14 blur-[130px]"
+        className="pointer-events-none absolute -top-36 left-1/2 -translate-x-1/2 w-[540px] h-[540px] rounded-full bg-[#E50914]/12 blur-[130px]"
       />
 
       <div className="w-full max-w-md relative z-10">
-        {/* Identidade da Plataforma */}
-        <div className="text-center mb-8">
-          <p className="text-xs font-semibold tracking-[0.22em] uppercase text-[#E50914] mb-2">
-            Área de Membros
-          </p>
-          <h1 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-            {PLATFORM_NAME}
-          </h1>
-          <p className="mt-2 text-sm sm:text-base text-neutral-300">
-            {PLATFORM_SLOGAN}
-          </p>
-        </div>
+        {/* Logótipo Oficial da Plataforma */}
+        <header className="flex flex-col items-center text-center mb-4">
+          <div className="w-28 h-28 sm:w-32 sm:h-32 flex items-center justify-center">
+            <img
+              src="/assets/aistudio/file_000000002f9881f495fecffefdcdfafb_e5a76949.png"
+              alt="Império Digital — Academia de Negócios Online"
+              className="w-full h-full object-contain drop-shadow-[0_14px_32px_rgba(0,0,0,0.85)] [mask-image:radial-gradient(circle_at_center,black_72%,rgba(0,0,0,0.8)_82%,transparent_95%)] [-webkit-mask-image:radial-gradient(circle_at_center,black_72%,rgba(0,0,0,0.8)_82%,transparent_95%)]"
+            />
+          </div>
+          <h1 className="sr-only">{PLATFORM_NAME} — {PLATFORM_SLOGAN}</h1>
+        </header>
 
         {/* Cartão de Autenticação */}
         <div className="bg-[#1F1F23] rounded-3xl p-6 sm:p-8 shadow-[0_24px_60px_rgba(0,0,0,0.65)] border border-white/10">
