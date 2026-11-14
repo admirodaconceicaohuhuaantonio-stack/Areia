@@ -1,0 +1,6 @@
+{
+  "name": "IMPÉRIO DIGITAL",
+  "description": "Plataforma de membros premium do curso online Império Digital — Aprende. Executa. Vende. Escala.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
